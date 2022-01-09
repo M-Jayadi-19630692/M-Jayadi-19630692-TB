@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1085" pageHeight="595" orientation="Landscape" columnWidth="1045" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="289"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT*FROM data_penerimaan]]>
+	</queryString>
+	<field name="nisn" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nilai_rata2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nilai_rata2_lulus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="berkas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sts_adm" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sts_lulus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="286" y="29" width="273" height="34"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PENERIMAAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="15" width="48" height="20"/>
+				<text><![CDATA[NISN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="15" width="75" height="20"/>
+				<text><![CDATA[Nama Siswa/i]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="15" width="75" height="20"/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="15" width="75" height="20"/>
+				<text><![CDATA[Nilai Rata-Rata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="15" width="159" height="20"/>
+				<text><![CDATA[Nilai Rata-Rata Untuk Kelulusan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="612" y="15" width="109" height="20"/>
+				<text><![CDATA[Kelengkapan Berkas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="876" y="15" width="155" height="20"/>
+				<text><![CDATA[Status Kelulusan/Penerimaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="758" y="15" width="109" height="20"/>
+				<text><![CDATA[Status Administrasi]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="6" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="16" y="10" width="59" height="20"/>
+				<textFieldExpression><![CDATA[$F{nisn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="10" width="59" height="20"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="10" width="59" height="20"/>
+				<textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="10" width="69" height="20"/>
+				<textFieldExpression><![CDATA[$F{nilai_rata2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="9" width="104" height="20"/>
+				<textFieldExpression><![CDATA[$F{nilai_rata2_lulus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="9" width="73" height="20"/>
+				<textFieldExpression><![CDATA[$F{berkas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="760" y="9" width="136" height="20"/>
+				<textFieldExpression><![CDATA[$F{sts_adm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="907" y="9" width="73" height="20"/>
+				<textFieldExpression><![CDATA[$F{sts_lulus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

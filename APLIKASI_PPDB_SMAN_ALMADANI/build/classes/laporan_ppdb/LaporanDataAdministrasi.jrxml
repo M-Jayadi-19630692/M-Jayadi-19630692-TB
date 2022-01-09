@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="1281" pageHeight="595" orientation="Landscape" columnWidth="1241" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="580"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM data_administrasi]]>
+	</queryString>
+	<field name="noadm" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_bayar" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_bpn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_bpn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah_bpn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sisa_bpn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sts_lunas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="376" y="27" width="303" height="37"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA ADMINISTRASI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="0" width="100" height="20"/>
+				<text><![CDATA[No. Administrasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="75" height="20"/>
+				<text><![CDATA[Nama Siswa/i]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="0" width="76" height="20"/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="110" height="20"/>
+				<text><![CDATA[Tanggal Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="0" width="92" height="20"/>
+				<text><![CDATA[Jenis Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="683" y="0" width="92" height="20"/>
+				<text><![CDATA[Biaya Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="811" y="0" width="105" height="20"/>
+				<text><![CDATA[Jumlah Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="959" y="0" width="105" height="20"/>
+				<text><![CDATA[Sisa Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1101" y="0" width="94" height="20"/>
+				<text><![CDATA[Status Pelunasan]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="44" y="0" width="77" height="20"/>
+				<textFieldExpression><![CDATA[$F{noadm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="128" y="0" width="88" height="20"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="0" width="75" height="20"/>
+				<textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="110" height="20"/>
+				<textFieldExpression><![CDATA[$F{tgl_bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="0" width="220" height="20"/>
+				<textFieldExpression><![CDATA[$F{jenis_bpn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="707" y="0" width="85" height="20"/>
+				<textFieldExpression><![CDATA[$F{biaya_bpn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="844" y="0" width="85" height="20"/>
+				<textFieldExpression><![CDATA[$F{jumlah_bpn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="982" y="2" width="85" height="20"/>
+				<textFieldExpression><![CDATA[$F{sisa_bpn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1116" y="0" width="85" height="20"/>
+				<textFieldExpression><![CDATA[$F{sts_lunas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
